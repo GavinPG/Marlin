@@ -100,7 +100,7 @@
  * M30  - Delete file from SD: "M30 /path/file.gco"
  * M31  - Report time since last M109 or SD card start to serial.
  * M32  - Select file and start SD print: "M32 [S<bytepos>] !/path/file.gco#". (Requires SDSUPPORT)
- *        Use P to run other files as sub-programs: "M32 P !filename#"
+ *        Use P to run other files as sub-programs: "M32 cP !filename#"
  *        The '#' is necessary when calling from within sd files, as it stops buffer prereading
  * M33  - Get the longname version of a path. (Requires LONG_FILENAME_HOST_SUPPORT)
  * M34  - Set SD Card sorting options. (Requires SDCARD_SORT_ALPHA)
