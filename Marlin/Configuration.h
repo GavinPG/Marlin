@@ -385,10 +385,10 @@
   //#define  DEFAULT_Ki 0.43  //0.59
   //#define  DEFAULT_Kd 854.89  //59.89
 
-  // A10M - Me (calibrated for 205 degrees C)
-  #define  DEFAULT_Kp 91.83
-  #define  DEFAULT_Ki 11.32
-  #define  DEFAULT_Kd 186.19
+  // A10M - Me (calibrated for 245 degrees C)
+  #define  DEFAULT_Kp 69.06
+  #define  DEFAULT_Ki 13.38
+  #define  DEFAULT_Kd 89.11
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -634,14 +634,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.5, 80.0, 400.0, 2654.0 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.5, 80.0, 400.0, 663.5 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 400, 400, 400, 400 } //Orig { 300, 300, 5, 25 } //1.0.3 { 300, 300,20, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 400, 400, 400, 500 } //Orig { 300, 300, 5, 25 } //1.0.3 { 300, 300,20, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -649,7 +649,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION       { 5000, 5000, 50, 10000 } //1.0.3 { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION       { 5000, 5000, 50, 7200 } //1.0.3 { 3000, 3000, 100, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -659,9 +659,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  7200    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -684,7 +684,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-// #define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -804,7 +804,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER -42  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.88 // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.10 // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -1285,8 +1285,8 @@
 #define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_TEMP_HOTEND 250
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_HOTEND 245
+#define PREHEAT_2_TEMP_BED    100
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
