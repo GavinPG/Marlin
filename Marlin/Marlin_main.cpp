@@ -9548,6 +9548,14 @@ inline void gcode_M205() {
         SERIAL_ERRORLNPGM("?J out of range (0.01 to 0.3)");
       }
     }
+    if (parser.seen('A')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter A is invalid with Junction Deviation enabled"); }
+    if (parser.seen('B')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter B is invalid with Junction Deviation enabled"); }
+    if (parser.seen('C')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter C is invalid with Junction Deviation enabled"); }
+    if (parser.seen('D')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter D is invalid with Junction Deviation enabled"); }
+    if (parser.seen('X')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter X is invalid with Junction Deviation enabled"); }
+    if (parser.seen('Y')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter Y is invalid with Junction Deviation enabled"); }
+    if (parser.seen('Z')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter Z is invalid with Junction Deviation enabled"); }
+    if (parser.seen('E')) { SERIAL_ERROR_START(); SERIAL_ERRORLNPGM("Parameter E is invalid with Junction Deviation enabled"); }
   #else
     #if ENABLED(HANGPRINTER)
       if (parser.seen('A')) planner.max_jerk[A_AXIS] = parser.value_linear_units();
